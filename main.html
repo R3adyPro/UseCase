@@ -28,6 +28,9 @@
         </form> 
         <br>
     </div>
+    <div id="forms">
+
+    </div>
 
     <div id="piilota">
         <label for="Kysymys">Kysymys</label>
@@ -38,8 +41,12 @@
         </select>
         <label for="vastaus"></label>
         <input type="text" id="vastaus">
-        <input type="button" value="Lisää vastaus" onclick="Uudenluominen('form1', 'radio', 'kysymys', 'vastaus');">
-        <input type="button" value="Lopeta" >
+        <input type="button" value="Lisää vastaus" onclick="Uudenluominen('forms', 'radio', 'kysymys', 'vastaus');">
+        <input type="button" value="Lopeta" onclick="Lopeta()">
+        <br><br>
+        <label for="pois">Poista äänestys. Muodossa esim. form3</label>
+        <input type="text" id="poista">
+        <input type="button" value="Poista äänestys" id="poistaform" onclick="Poista('poista')">
     </div>
     <script src="toiminta.js"></script>
 </body>
