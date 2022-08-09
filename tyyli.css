@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+}
+#tilanVaihto{
+    float: right;
+}
+#piilota{
+    display: none;
+}

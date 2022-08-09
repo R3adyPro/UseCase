@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UseCase prototyyppi</title>
+    <link rel="stylesheet" href=tyyli.css>
+</head>
+<body>
+    <div>
+        <h1 id="otsikko">Äänestäminen</h1>
+    </div>
+    <div id="tilanVaihto">
+        <button onclick="Vaihdatilaa()">Vaihda tilaa</button>
+    </div>
+    <div id="form1">
+        <p>Paras ohjelmointi kieli</p>
+        <form>
+            <input type="radio" id="html" value="HTML" name="kieli">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" value="CSS" name="kieli">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript"value="JavaScript" name="kieli">
+            <label for="javascript">JavaScript</label><br>
+            <br>
+            <button id="aanestys" type="submit">Submit</button>
+        </form> 
+        <br>
+    </div>
+
+    <div id="piilota">
+        <label for="Kysymys">Kysymys</label>
+        <input type="text" id="kysymys">
+        <br>
+        <select name="vaihtoehdot">
+            <option value="radio">Radio</option>
+        </select>
+        <label for="vastaus"></label>
+        <input type="text" id="vastaus">
+        <input type="button" value="Lisää vastaus" onclick="Uudenluominen('form1', 'radio', 'kysymys', 'vastaus');">
+        <input type="button" value="Lopeta" >
+    </div>
+    <script src="toiminta.js"></script>
+</body>
+</html>
