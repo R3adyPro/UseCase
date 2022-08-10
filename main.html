@@ -14,7 +14,7 @@
     <div id="tilanVaihto">
         <button onclick="Vaihdatilaa()">Vaihda tilaa</button>
     </div>
-    <div id="form1">
+    <div id="form">
         <p>Paras ohjelmointi kieli</p>
         <form>
             <input type="radio" id="html" value="HTML" name="kieli">
@@ -24,7 +24,7 @@
             <input type="radio" id="javascript"value="JavaScript" name="kieli">
             <label for="javascript">JavaScript</label><br>
             <br>
-            <button id="aanestys" type="submit">Submit</button>
+            <button id="aanestys" type="button" onclick="ClearAndVote()">Submit</button>
         </form> 
         <br>
     </div>
@@ -43,10 +43,6 @@
         <input type="text" id="vastaus">
         <input type="button" value="Lisää vastaus" onclick="Uudenluominen('forms', 'radio', 'kysymys', 'vastaus');">
         <input type="button" value="Lopeta" onclick="Lopeta()">
-        <br><br>
-        <label for="pois">Poista äänestys. Muodossa esim. form3</label>
-        <input type="text" id="poista">
-        <input type="button" value="Poista äänestys" id="poistaform" onclick="Poista('poista')">
     </div>
     <script src="toiminta.js"></script>
 </body>
