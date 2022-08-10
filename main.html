@@ -17,15 +17,23 @@
     <div id="form">
         <p>Paras ohjelmointi kieli</p>
         <form>
-            <input type="radio" id="html" value="HTML" name="kieli">
+            <input type="radio" id="html" value="1" name="kieli">
             <label for="html">HTML</label><br>
-            <input type="radio" id="css" value="CSS" name="kieli">
+            <input type="radio" id="css" value="2" name="kieli">
             <label for="css">CSS</label><br>
-            <input type="radio" id="javascript"value="JavaScript" name="kieli">
+            <input type="radio" id="javascript"value="3" name="kieli">
             <label for="javascript">JavaScript</label><br>
             <br>
-            <button id="aanestys" type="button" onclick="ClearAndVote()">Submit</button>
-        </form> 
+            <button id="aanestys" type="button" onclick="ClearAndVote()">Submit</button> <button id="näytä" type="button" onclick="nayta()">Näytä tilanne</button>
+        </form>
+        <div id="tulokset" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p id="HTML"></p>
+              <p id="CSS"></p>
+              <p id="JAVA"></p>
+            </div>
+          </div>
         <br>
     </div>
     <div id="forms">

@@ -4,8 +4,17 @@ i = 0
 formCount = 1
 var lopeta = false
 
+html = 0
+css = 0
+java = 0
 
+var cancel = setInterval(tulos, 1000);
 
+function tulos(){
+    document.getElementById("HTML").innerHTML = "HTML: " + html + " Ääntä"
+    document.getElementById("CSS").innerHTML = "CSS: " + css + " Ääntä"
+    document.getElementById("JAVA").innerHTML = "Javascript: " + java + " Ääntä"
+}
 
 function Uudenluominen(divnimi, tyyppi, kysymys, vastaus){
     var uusidiv = document.createElement('div')
@@ -41,7 +50,7 @@ function Uudenluominen(divnimi, tyyppi, kysymys, vastaus){
         }
         switch(tyyppi){
             case 'radio':
-                uusidiv.innerHTML = "<input type='radio' name='myRadioButtons[]'>" + " " + vaihtoehto;
+                uusidiv.innerHTML = "<input type='radio' name='myRadioButtons[]' value='++'>" + " " + vaihtoehto;
                 break;
         }
         document.getElementById(divnimi).appendChild(uusidiv);
@@ -126,7 +135,29 @@ function Lopeta(){
 }
 
 function ClearAndVote(){
-    var ele = document.getElementsByName("myRadioButtons[]");
-    for(var i=0;i<ele.length;i++)
-       ele[i].checked = false;
+    if(document.getElementById('html').checked){
+        html = html
+    }else if(document.getElementById('css').checked){
+        css = css + 1
+    }else if(document.getElementById('javascript').checked){
+        java = java + 1
+    }
+    console.log(html, css, java)
+}
+
+var modal = document.getElementById("tulokset")
+var btn = document.getElementById("näytä")
+var span = document.getElementsByClassName("close")[0];
+
+function nayta(){
+    modal.style.display = "block";
+}
+
+window.onclick = function(event){
+    if (event.taget == modal){
+        modal.style.display = "none";
+    }
+}
+span.onclick = function(){
+    modal.style.display = "none";
 }

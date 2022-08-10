@@ -7,3 +7,22 @@ h1{
 #piilota{
     display: none;
 }
+.modal{
+    display: none;
+    position: fixed;
+    width: 10%;
+    height: 10%;
+}
+.modal-content{
+    background-color: white;
+    margin: 5% auto;
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
