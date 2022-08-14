@@ -44,8 +44,11 @@ function Uudenluominen(divnimi, tyyppi, kysymys, vastaus){
         document.getElementById(kysymys).value = "";
     }
     else if(i < 6){
-        console.log(lopeta)
+        console.log(i)
         if(lopeta == true){
+            i = i - i + 6;
+        }else if(i == 5 && lopeta == false){
+            lopeta = true
             i = i - i + 6;
         }
         switch(tyyppi){
@@ -58,6 +61,7 @@ function Uudenluominen(divnimi, tyyppi, kysymys, vastaus){
         i++
     }
     else if(i == 7){
+        console.log(i)
         uusidiv.innerHTML = '<br>'
         document.getElementById(divnimi).appendChild(uusidiv)
         i++
